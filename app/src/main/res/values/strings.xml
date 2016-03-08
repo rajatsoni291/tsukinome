@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tsukinome</string>
+    <string name="title_activity_maps">Tsukinome</string>
+    <string name="service_not_available">Service Not Available</string>
+    <string name="invalid_lat_lang_used">Invalid Lat Lang used</string>
+    <string name="no_address_found">No Address Found</string>
+    <string name="address_found">Address Found</string>
+    <string name="type">Type</string>
+    <string name="current">Current Loc</string>
+    <string name="search">Search Loc</string>
+</resources>
