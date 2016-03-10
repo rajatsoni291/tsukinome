@@ -25,4 +25,5 @@ public final class Constants {
     public static final String CAMERA_POSITION_LATITUDE = PACKAGE_NAME + ".CAMERA_POSITION_LATITUDE";
     public static final String CAMERA_POSITION_LONGITUDE = PACKAGE_NAME + ".CAMERA_POSITION_LONGITUDE";
     public static final String PREF_NAME = PACKAGE_NAME + ".PREF_NAME";
+
 }

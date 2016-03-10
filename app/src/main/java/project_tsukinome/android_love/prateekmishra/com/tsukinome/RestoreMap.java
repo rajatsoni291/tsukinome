@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
@@ -14,6 +13,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class RestoreMap {
 
     private SharedPreferences mapStatePrefs;
+    private LatLng mLatLng;
 
     public RestoreMap(Context context){
         mapStatePrefs = context.getSharedPreferences(Constants.PREF_NAME,Context.MODE_PRIVATE);
@@ -30,6 +30,7 @@ public class RestoreMap {
         editor.putInt(Constants.CAMERA_POSITION_MAPTYPE,map.getMapType());
         editor.commit();
     }
+
 
     public CameraPosition getSavedCameraPosition(){
         double latitude = mapStatePrefs.getFloat(Constants.CAMERA_POSITION_LATITUDE,0);

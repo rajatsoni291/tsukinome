@@ -8,4 +8,5 @@
     <string name="type">Type</string>
     <string name="current">Current Loc</string>
     <string name="search">Search Loc</string>
+    <string name="clear">Clear</string>
 </resources>
