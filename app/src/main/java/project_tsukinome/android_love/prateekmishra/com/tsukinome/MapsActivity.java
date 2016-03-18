@@ -7,7 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;                         
+import android.graphics.BitmapFactory;                          //getSupportActionBar().setBackgroundDrawable(new ColorDrawable( Color.parseColor("#2196F3")));
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Geocoder;
@@ -607,7 +607,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         builder.include(new LatLng(DestinationMarker.getPosition().latitude,DestinationMarker.getPosition().longitude));
         LatLngBounds bounds = builder.build();
 
-        int padding = 5; // offset from edges of the map in pixels
+        int padding = 100; // offset from edges of the map in pixels
         CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
         mMap.animateCamera(cu);
     }
@@ -942,14 +942,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
             // Drawing polyline in the Google Map for the i-th route
-            lineOptions.width(17);
-            lineOptions.color(Color.parseColor("#1976D2")).geodesic(true);
-            line1 =  mMap.addPolyline(lineOptions);
-            lineOptions.width(10);
-            lineOptions.color(Color.parseColor("#03A9F4")).geodesic(true);
-            line2 = mMap.addPolyline(lineOptions);
-            String l = "Distance : "+distance+"  Duration : "+duration;
-            Toast.makeText(MapsActivity.this,l,Toast.LENGTH_LONG).show();
+            if(lineOptions!=null) {
+                lineOptions.width(17);
+                lineOptions.color(Color.parseColor("#1976D2")).geodesic(true);
+                line1 = mMap.addPolyline(lineOptions);
+                lineOptions.width(10);
+                lineOptions.color(Color.parseColor("#03A9F4")).geodesic(true);
+                line2 = mMap.addPolyline(lineOptions);
+                String l = "Distance : " + distance + "  Duration : " + duration;
+                Toast.makeText(MapsActivity.this, l, Toast.LENGTH_LONG).show();
+            }
         }
     }
 
