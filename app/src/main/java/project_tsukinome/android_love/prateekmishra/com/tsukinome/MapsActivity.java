@@ -7,7 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;                          //getSupportActionBar().setBackgroundDrawable(new ColorDrawable( Color.parseColor("#2196F3")));
+import android.graphics.BitmapFactory;                         
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Geocoder;
